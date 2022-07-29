@@ -1,0 +1,37 @@
+﻿@model  studentApi.Models.STable
+@{
+
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using(Html.BeginForm())
+
+{
+    @Html.Label("Enter the Full Name")
+    @Html.TextBoxFor(m => m.name, new { Class = "form-control" })
+
+    @Html.Label("Gender")
+    <br />
+    @Html.Label("Male")
+    @Html.RadioButtonFor(m => m.gender, "Male")
+    @Html.Label("Female")
+    @Html.RadioButtonFor(m => m.gender, "Female")
+
+    @Html.Label("Enter the sub1")
+    @Html.TextBoxFor(m => m.sub1, new { Class = "form-control" })
+
+    @Html.Label("Enter the sub2")
+    @Html.TextBoxFor(m => m.sub2, new { Class = "form-control" })
+
+    
+    @Html.Label("Enter the sub3")
+    @Html.TextBoxFor(m => m.sub3, new { Class = "form-control" })
+
+
+    <br />
+
+    <input type="submit" value="insert" class="btn btn-success" />
+}
+

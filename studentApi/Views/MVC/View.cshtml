@@ -1,0 +1,34 @@
+﻿
+@model List<studentApi.Models.STable>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Student Id</td>
+        <td>Student Name</td>
+        <td>Gender</td>
+        <td>Sub-1 Marks</td>
+        <td>Sub-2 Marks</td>
+        <td>Sub-3 Marks</td>
+        <td>Total</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.id</td>
+    <td>@item.name</td>
+    <td>@item.gender</td>
+    <td>@item.sub1</td>
+    <td>@item.sub2</td>
+    <td>@item.sub3</td>
+    <td>@item.total</td>
+    
+</tr>
+    }
+</table>
+
